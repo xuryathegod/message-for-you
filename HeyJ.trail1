@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hey lil Munchkin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: green;
+    }
+    #error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>I have a message for you</h1>
+  <p>(Hint: Format: MM/DD/YYYY)</p>
+  <input type="password" id="password" placeholder="When was our last kiss?">
+  <button onclick="checkPassword()">Submit</button>
+  <div id="error"></div>
+  <div id="message">💌 Just wanted you to know, you're still everything to me.</div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value.trim();
+      const correctPassword = "07/22/2023";
+      const message = document.getElementById("message");
+      const error = document.getElementById("error");
+
+      if (input === correctPassword) {
+        message.style.display = "block";
+        error.textContent = "";
+      } else {
+        message.style.display = "none";
+        error.textContent = "That’s not quite the date I’m thinking of.";
+      }
+    }
+  </script>
+</body>
+</h
